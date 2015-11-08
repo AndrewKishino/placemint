@@ -126,7 +126,7 @@ body {
 
 .btn-location {
   float: right;
-  margin-top: 14px;
+  margin-top: 9px;
   background: #45dea6;
   border: none;
   background-image: -webkit-linear-gradient(top, #45dea6, #3ec292);
@@ -141,7 +141,7 @@ body {
 
 .btn-location:hover {
   float: right;
-  margin-top: 14px;
+  margin-top: 9px;
   border: none;
   background: #3dbd8e;
   background-image: -webkit-linear-gradient(top, #3dbd8e, #339c76);
@@ -180,7 +180,7 @@ body {
   .search-box {
     border-radius: 2px;
     border: none;
-    width: 72%;
+    width: 65%;
     height: 40px;
     margin: 10px 2px 10px 10px;
     padding-left: 15px;
@@ -205,7 +205,7 @@ body {
     text-shadow: 0 0 20px black,0 0 20px black,0 0 5px #000;
   }
   .search-box {
-    width: 51%;
+    width: 47%;
   }
 }
 
