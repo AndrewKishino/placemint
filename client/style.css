@@ -93,40 +93,19 @@ body {
   border-radius: 2px;
   border: none;
   font-size: 24px;
-  width: 75%;
+  width: 85%;
   height: 40px;
   margin: 15px 2px 15px 15px;
   padding-left: 15px;
 }
 
-.btn {
-  float: right;
-  margin: 14px;
-  background: #45dea6;
-  border: none;
-  background-image: -webkit-linear-gradient(top, #45dea6, #3ec292);
-  background-image: linear-gradient(to bottom, #45dea6, #3ec292);
-  border-radius: 5px;
-  font-family: Arial;
-  color: #ffffff;
-  font-size: 20px;
-  padding: 10px 25px 10px 25px;
-  text-decoration: none;
-}
-
-.btn:hover {
-  float: right;
-  border: none;
-  margin: 14px;
-  background: #3dbd8e;
-  background-image: -webkit-linear-gradient(top, #3dbd8e, #339c76);
-  background-image: linear-gradient(to bottom, #3dbd8e, #339c76);
-  text-decoration: none;
+.search-box-latlon {
+  display: none;
 }
 
 .btn-location {
   float: right;
-  margin-top: 9px;
+  margin: 14px;
   background: #45dea6;
   border: none;
   background-image: -webkit-linear-gradient(top, #45dea6, #3ec292);
@@ -141,7 +120,7 @@ body {
 
 .btn-location:hover {
   float: right;
-  margin-top: 9px;
+  margin: 14px;
   border: none;
   background: #3dbd8e;
   background-image: -webkit-linear-gradient(top, #3dbd8e, #339c76);
@@ -180,15 +159,15 @@ body {
   .search-box {
     border-radius: 2px;
     border: none;
-    width: 65%;
+    width: 83%;
     height: 40px;
     margin: 10px 2px 10px 10px;
     padding-left: 15px;
   }
-  .btn {
+  .btn-location {
     margin: 9px;
   }
-  .btn:hover {
+  .btn-location:hover {
     margin: 9px;
   }
 }
@@ -205,7 +184,7 @@ body {
     text-shadow: 0 0 20px black,0 0 20px black,0 0 5px #000;
   }
   .search-box {
-    width: 47%;
+    width: 72%;
   }
 }
 

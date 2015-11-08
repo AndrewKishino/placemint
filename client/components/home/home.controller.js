@@ -48,9 +48,13 @@
       }
 
       function updatePosition(position) {
-        document.getElementsByClassName('search-box')[0].value = position.coords.latitude+','+position.coords.longitude;
+        document.getElementsByClassName('search-box-latlon')[0].value = position.coords.latitude+','+position.coords.longitude;
+
+        fetchResults();
       }
     }
+
+
   }
 
 })();

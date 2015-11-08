@@ -13,7 +13,7 @@ module.exports = {
    */
   getLocations: function(req, res, next) {
     var queryString = 'https://maps.googleapis.com/maps/api/place/nearbysearch/json?location='+req.body.location+
-                      '&radius=500&types=food|grocery_or_supermarket&key='+process.env.API_KEY;
+                      '&radius=5000&keyword=vegetarian&key='+process.env.API_KEY;
 
     request.get(queryString, function(err, data) {
       console.log(data.body);
