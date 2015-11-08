@@ -1,0 +1,166 @@
+.search-container {
+  background-color: rgba(31, 31, 31, 0.71);
+  width: 85%;
+  height: 70px;
+  border-radius: 2px;
+  margin: auto auto;
+}
+
+.search-background {
+  display: block;
+  background-image: url('../../img/vegie-min.jpg');
+  background-size: cover;
+  background-position-y: -110px;
+  background-color: #8FCE9E;
+  width: 100%;
+  height: 450px;
+  margin: 40px auto;
+}
+
+.search-description {
+  padding: 130px 0 0px;
+  color: #fff;
+  font-size: 35px;
+  text-align: center;
+  text-shadow: 0 0 20px black,0 0 20px black,0 0 5px #000;
+}
+
+.search-box{
+  border-radius: 2px;
+  border: none;
+  font-size: 24px;
+  width: 75%;
+  height: 40px;
+  margin: 15px 2px 15px 15px;
+  padding-left: 15px;
+}
+
+.btn {
+  float: right;
+  margin: 14px;
+  background: #45dea6;
+  border: none;
+  background-image: -webkit-linear-gradient(top, #45dea6, #3ec292);
+  background-image: -moz-linear-gradient(top, #45dea6, #3ec292);
+  background-image: -ms-linear-gradient(top, #45dea6, #3ec292);
+  background-image: -o-linear-gradient(top, #45dea6, #3ec292);
+  background-image: linear-gradient(to bottom, #45dea6, #3ec292);
+  -webkit-border-radius: 5;
+  -moz-border-radius: 5;
+  border-radius: 5px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 20px;
+  padding: 10px 25px 10px 25px;
+  text-decoration: none;
+  &:hover {
+    float: right;
+    border: none;
+    margin: 14px;
+    background: #3dbd8e;
+    background-image: -webkit-linear-gradient(top, #3dbd8e, #339c76);
+    background-image: -moz-linear-gradient(top, #3dbd8e, #339c76);
+    background-image: -ms-linear-gradient(top, #3dbd8e, #339c76);
+    background-image: -o-linear-gradient(top, #3dbd8e, #339c76);
+    background-image: linear-gradient(to bottom, #3dbd8e, #339c76);
+    text-decoration: none;
+  }
+}
+
+.btn-location {
+  float: right;
+  margin-top: 14px;
+  background: #45dea6;
+  border: none;
+  background-image: -webkit-linear-gradient(top, #45dea6, #3ec292);
+  background-image: -moz-linear-gradient(top, #45dea6, #3ec292);
+  background-image: -ms-linear-gradient(top, #45dea6, #3ec292);
+  background-image: -o-linear-gradient(top, #45dea6, #3ec292);
+  background-image: linear-gradient(to bottom, #45dea6, #3ec292);
+  -webkit-border-radius: 5;
+  -moz-border-radius: 5;
+  border-radius: 5px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 20px;
+  padding: 5px 5px 2px 5px;
+  text-decoration: none;
+  &:hover {
+    float: right;
+    margin-top: 14px;
+    border: none;
+    background: #3dbd8e;
+    background-image: -webkit-linear-gradient(top, #3dbd8e, #339c76);
+    background-image: -moz-linear-gradient(top, #3dbd8e, #339c76);
+    background-image: -ms-linear-gradient(top, #3dbd8e, #339c76);
+    background-image: -o-linear-gradient(top, #3dbd8e, #339c76);
+    background-image: linear-gradient(to bottom, #3dbd8e, #339c76);
+    text-decoration: none;
+  }
+}
+
+.location-icon {
+  width: 30px;
+}
+
+@media screen and (max-width: 840px) {
+  .search-container {
+    background-color: rgba(31, 31, 31, 0.71);
+    width: 85%;
+    height: 60px;
+    border-radius: 2px;
+    margin: auto auto;
+  }
+
+  .search-background {
+    display: block;
+    background-image: url('../../img/vegie-min.jpg');
+    background-size: cover;
+    background-position-y: -50px;
+    width: 100%;
+    height: 270px;
+    margin: 20px auto;
+  }
+
+  .search-description {
+    padding: 55px 0 10px;
+    color: #fff;
+    font-size: 29px;
+    text-align: center;
+    text-shadow: 0 0 20px black,0 0 20px black,0 0 5px #000;
+  }
+
+  .search-box{
+    border-radius: 2px;
+    border: none;
+    width: 72%;
+    height: 40px;
+    margin: 10px 2px 10px 10px;
+    padding-left: 15px;
+  }
+
+  .btn {
+    margin: 9px;
+    &:hover {
+      margin: 9px;
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .search-background {
+    background-position-y: 0;
+  }
+
+  .search-description {
+    padding: 70px 0 20px;
+    color: #fff;
+    font-size: 18px;
+    text-align: center;
+    text-shadow: 0 0 20px black,0 0 20px black,0 0 5px #000;
+  }
+
+  .search-box {
+    width: 51%;
+  }
+}

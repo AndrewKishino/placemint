@@ -15,7 +15,7 @@
     function homeFactory($q, $http) {
 
       var factory = {
-        getLocations: getLocations
+        placesQuery: placesQuery
       };
 
       return factory;
@@ -29,8 +29,10 @@
        * @description Sends a GET request to server for all available modules.
        * @return {Object} response data
        */
-      function getLocations() {
-        return $http.get('')
+      function placesQuery(location) {
+        var queryString = 'https://maps.googleapis.com/maps/api/place/nearbysearch/json?location='+location+
+                          '&radius=500&types=food|grocery_or_supermarket&keyword=vegetarian&key=AIzaSyCW3Nkhaq7lPYEujqsVI7WIMUUTi1CsA2I';
+        return $http.get(queryString)
           .then(function(response) {
             return response.data;
           });

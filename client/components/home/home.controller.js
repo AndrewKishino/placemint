@@ -18,26 +18,46 @@
    */
   function HomeController(homeFactory) {
     var vm = this;
-    vm.getLocations = getLocations;
-    vm.positions = [];
-
-    init();
+    vm.fetchResults = fetchResults;
+    vm.getLocation = getLocation;
+    vm.results = [];
+    vm.location = {
+      lat: '',
+      lon: ''
+    };
 
     /**
-     * HomeController.getLocations
+     * HomeController.fetchResults()
      * 
-     * @description Signs a user up. Returns nothing.
-     * @param {Object} e The event object from form submission.
+     * @description Fetches the nearest locations.
+     * @param {String} location The geolocation of user.
      */
-    function getLocations() {
-      homeFactory.getLocations()
+    function fetchResults() {
+      var locations = document.getElementsByClassName('search-box')[0].value;
+      homeFactory.placesQuery(locations)
         .then(function(data) {
-          vm.positions = data;
+          vm.results = data;
+          console.log(data);
         });
     }
 
-    function init() {
-      
+    /**
+     * HomeController.getLocation()
+     * 
+     * @description Fetches the user's locations.
+     */
+    function getLocation() {
+      if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(updatePosition);
+      } else { 
+          alert('Browser does not support geolocation.');
+      }
+
+      function updatePosition(position) {
+        vm.location.lat = position.coords.latitude;
+        vm.location.lon = position.coords.longitude;
+        document.getElementsByClassName('search-box')[0].value = position.coords.latitude+','+position.coords.longitude;
+      }
     }
   }
 

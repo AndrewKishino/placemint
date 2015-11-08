@@ -12,9 +12,4 @@ module.exports = function (app, express) {
   // define routers
   var usersRouter = express.Router();
 
-  // api paths for various routes
-  app.use('/api/users', usersRouter);
-
-  // require necessary route files
-  require('../api/users/userRoutes.js')(usersRouter);
 };
