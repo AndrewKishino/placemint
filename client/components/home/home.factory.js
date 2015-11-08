@@ -29,10 +29,10 @@
        * @description Sends a GET request to server for all available modules.
        * @return {Object} response data
        */
-      function placesQuery(location) {
-        var queryString = 'https://maps.googleapis.com/maps/api/place/nearbysearch/json?location='+location+
-                          '&radius=500&types=food|grocery_or_supermarket&keyword=vegetarian&key=AIzaSyCW3Nkhaq7lPYEujqsVI7WIMUUTi1CsA2I';
-        return $http.get(queryString)
+      function placesQuery() {
+        var location = document.getElementsByClassName('search-box')[0].value;
+
+        return $http.post('/api/locations/locations', {location: location})
           .then(function(response) {
             return response.data;
           });

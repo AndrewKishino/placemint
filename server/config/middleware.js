@@ -10,6 +10,12 @@ module.exports = function (app, express) {
   app.use(express.static(path.join(__dirname + '/../../client')));
 
   // define routers
-  var usersRouter = express.Router();
+  var locationsRouter = express.Router();
+
+  // api paths for various routes
+  app.use('/api/locations', locationsRouter);
+
+  // require necessary route files
+  require('../api/locations/locationRoutes.js')(locationsRouter);
 
 };

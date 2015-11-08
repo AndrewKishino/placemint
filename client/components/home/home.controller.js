@@ -21,10 +21,6 @@
     vm.fetchResults = fetchResults;
     vm.getLocation = getLocation;
     vm.results = [];
-    vm.location = {
-      lat: '',
-      lon: ''
-    };
 
     /**
      * HomeController.fetchResults()
@@ -33,11 +29,9 @@
      * @param {String} location The geolocation of user.
      */
     function fetchResults() {
-      var locations = document.getElementsByClassName('search-box')[0].value;
-      homeFactory.placesQuery(locations)
+      homeFactory.placesQuery()
         .then(function(data) {
-          vm.results = data;
-          console.log(data);
+          vm.results = data.results;
         });
     }
 
@@ -54,8 +48,6 @@
       }
 
       function updatePosition(position) {
-        vm.location.lat = position.coords.latitude;
-        vm.location.lon = position.coords.longitude;
         document.getElementsByClassName('search-box')[0].value = position.coords.latitude+','+position.coords.longitude;
       }
     }

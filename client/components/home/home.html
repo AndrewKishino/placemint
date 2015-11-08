@@ -8,5 +8,14 @@
         <button class="btn-location" ng-click="home.getLocation()"><img class="location-icon" src="../../img/my_location.svg"></button>
       </div>
     </div>
+    <div class="results">
+      <div class="result" ng-repeat="location in home.results">
+        {{ location.name }}<br>
+        {{ location.price_level }}<br>
+        {{ location.rating }}<br>
+        {{ location.types[0] }}<br>
+        {{ location.vicinity }}<br>
+      </div>
+    </div>
   </div>
 </div>
