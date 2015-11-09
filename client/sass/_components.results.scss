@@ -4,5 +4,26 @@
 
 .result {
   margin: 10px;
-  background: #aaa;
+  height: 135px;
+  background: #FFFFFF;
+  border-radius: 2px;
+  padding: 10px;
+  box-shadow: 0px 1px 2px #999;
+}
+
+.results-description {
+  margin: 10px;
+  color: #000;
+  font-size: 18px;
+  background: #FFF;
+  padding: 10px;
+  box-shadow: 0 1px 2px #999;
+}
+
+.location-desc {
+  
+}
+
+.directions-icon {
+  width: 60px;
 }

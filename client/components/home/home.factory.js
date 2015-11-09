@@ -34,7 +34,7 @@
 
         $http.get('https://maps.googleapis.com/maps/api/geocode/json?latlng='+location+'&key=AIzaSyCW3Nkhaq7lPYEujqsVI7WIMUUTi1CsA2I')
           .then(function(response) {
-            document.getElementsByClassName('search-box')[0].value = response.data.results[1].formatted_address;
+            document.getElementsByClassName('search-box-latlon')[0].value = response.data.results[1].formatted_address;
           });
 
         return $http.post('/api/locations/locations', {location: location})

@@ -4,18 +4,21 @@
       <h2 class="search-description">Search For The Freshest<br/>Vegetarian And Vegan Options</h2>
       <div class="search-container">
         <input class="search-box-latlon" type="text" name="location">
-        <input class="search-box" type="text" name="location">
-        <button class="btn-location" ng-click="home.getLocation()"><img class="location-icon" src="../../img/my_location.svg"></button>
+        <button class="btn" ng-click="home.getLocation()">Find Near Me</button>
       </div>
     </div>
     <div class="results">
+      <div class="results-description" ng-show="home.searched">Showing results near: {{ home.vicinity }}</div>
       <div class="result" ng-repeat="location in home.results">
-        {{ location.name }}<br>
-        {{ location.price_level }}<br>
-        {{ location.rating }}<br>
-        {{ location.types[0] }}<br>
-        {{ location.vicinity }}<br>
+        <div class="location-desc left">{{ location.name }}</div><br>
+        <div class="location-desc left">{{ location.vicinity }}</div><br>
+        <div class="location-desc left">{{ home.distance(home.location.lat, home.location.lon, location.geometry.location.lat, location.geometry.location.lng, 'N') }} miles away</div><br>
+        
+        <a class="right" href="https://maps.google.com?q={{ location.geometry.location.lat+','+location.geometry.location.lng }}" target="_blank">
+          <img class="directions-icon" src="../img/mapsicon.png">
+        </a>
       </div>
     </div>
   </div>
+  <spinner-directive display="home.showSpinner"></spinner-directive>
 </div>
